@@ -95,7 +95,7 @@
   <div id="s-start" class="screen active">
     <div class="top-badge"><div class="dot-pulse"></div> Secure Quiz System</div>
     <div class="card">
-      <div class="card-title">Quiz — Software Requirement Engineering</div>
+      <div class="card-title">Quiz — HCI & Computer Graphics</div>
       <div class="card-sub">Add your name and roll no to start your Quiz-- Yeh quiz sirf ek baar dia ja sakti hai.</div>
       <div class="rules">
         <div class="rule"><span class="rule-icon">⏱</span> Every Question has 30 sec Timer</div>
@@ -196,32 +196,33 @@ const LABELS = ['A','B','C','D'];
 // ans: 0=A, 1=B, 2=C, 3=D
 // ══════════════════════════════════════════════
 const ALL_QUESTIONS = [
-  // ── LAB 05 — System Description & Use Case ──
-  { q: "What is the main purpose of an Overall Description section in an SRS document?", opts: ["To list all bugs in the system","To describe the product perspective, functions, user classes, and constraints","To define the database schema","To write test cases"], ans: 1 },
-  { q: "In a Use Case Model, what does an 'Actor' represent?", opts: ["A database table","A software module","Any entity (person or system) that interacts with the system from outside","An internal system process"], ans: 2 },
-  { q: "What is the difference between an 'include' and an 'extend' relationship in use case diagrams?", opts: ["Include is optional; extend is mandatory","Include is mandatory behavior shared between use cases; extend is optional behavior added under certain conditions","They mean the same thing","Include is for actors; extend is for use cases"], ans: 1 },
-  { q: "Which section of an SRS describes the different types of users who will interact with the system?", opts: ["System Interfaces","User Classes and Characteristics","Communication Interfaces","Design Constraints"], ans: 1 },
-  { q: "What does 'Product Perspective' describe in an SRS?", opts: ["The financial cost of the product","How the system fits into a larger context and its relationship to other systems","The programming language used","The number of users expected"], ans: 1 },
-  { q: "Why is a Use Case Diagram important in Software Requirement Engineering?", opts: ["It shows the database structure","It represents interactions between actors and the system, helping stakeholders understand system behavior","It defines the code architecture","It lists all non-functional requirements"], ans: 1 },
-  { q: "What is a 'closed community platform' in the context of software systems?", opts: ["A system accessible to anyone on the internet","A system restricted to a specific verified group of users","A system that does not use the internet","A system with no login required"], ans: 1 },
-  { q: "What is meant by a 'non-profit / cost-sharing model' in a software system's product perspective?", opts: ["The system is free to develop","The system facilitates sharing costs among users rather than generating profit","The system has no backend","The system charges a subscription fee"], ans: 1 },
+  // ── UI/UX BASICS ──
+  { q: "A user opens an app for the first time and has no idea where to tap next. Which UX principle has been violated?", opts: ["Visual Hierarchy", "Discoverability", "Affordance", "Feedback"], ans: 1 },
+  { q: "You are designing a checkout button. It's green, large, and placed at the bottom-right. A user still misses it. What should you check first?", opts: ["Change the button color to red", "Check if it has enough contrast with the background", "Make the button round instead of rectangular", "Add an animation to the button"], ans: 1 },
+  { q: "Your team wants to know WHY users abandon a form halfway. What's the best research method?", opts: ["A/B Testing", "Heuristic Evaluation", "User Interviews", "Card Sorting"], ans: 2 },
+  { q: "An e-commerce site has 500 products. Users often say they 'can't find what they're looking for.' What UX activity would MOST help?", opts: ["Redesign the homepage hero image", "Conduct a Card Sorting exercise", "Add more product images", "Increase the font size"], ans: 1 },
+  { q: "A user accidentally deletes their account. There was no confirmation dialog. Which usability heuristic was violated?", opts: ["Match between system and real world", "Error Prevention", "Flexibility and Efficiency", "Aesthetic and Minimalist Design"], ans: 1 },
+  { q: "You have a form with 15 fields. Users often feel overwhelmed and leave without submitting. What's the best UI fix?", opts: ["Use smaller font to fit everything above the fold", "Break the form into multiple steps (wizard pattern)", "Remove all labels and use placeholder text only", "Add a progress animation"], ans: 1 },
+  { q: "A new user opens Spotify and it suggests songs based on their location. They didn't expect this. What UX concept is at risk?", opts: ["Learnability", "Privacy by Design / Trust", "Aesthetic Consistency", "Navigation Depth"], ans: 1 },
+  { q: "A developer says 'our app already has colors to indicate errors — red for wrong, green for correct.' What accessibility issue might remain?", opts: ["The fonts are too small", "Color-blind users may not distinguish red from green", "The icons are too detailed", "The layout isn't responsive"], ans: 1 },
+  { q: "Which of the following best describes 'White Space' (Negative Space) in UI design?", opts: ["Empty space that indicates a design bug", "Intentional spacing that improves readability and focus", "Space used only in white-themed designs", "The area between the navigation and footer"], ans: 1 },
+  { q: "A food delivery app has 8 screens between opening the app and placing an order. Users frequently drop off at screen 5. What should the designer prioritize?", opts: ["Redesign the home screen only", "Analyze and simplify the user flow to reduce steps", "Add tutorial pop-ups on every screen", "Change the app's color theme"], ans: 1 },
 
-  // ── LAB 06 — Operating Environment & Constraints ──
-  { q: "What does 'Operating Environment' describe in an SRS?", opts: ["The programming language and IDE used","The hardware, software, network conditions, and external factors in which the system will run","The test plan for the system","The deployment budget"], ans: 1 },
-  { q: "What is a 'Failover Mechanism' in system reliability?", opts: ["A feature that shuts down the system under heavy load","A backup system that takes over automatically if the primary server fails","A manual process to restart the server","A security firewall"], ans: 1 },
-  { q: "What is 'Cloud Redundancy' in system design?", opts: ["Storing data only on one server","Using multiple servers so that if one fails, others continue to serve requests","Encrypting all cloud data","Deleting old backups automatically"], ans: 1 },
-  { q: "Which type of constraint ensures a system processes requests within a defined time limit?", opts: ["Security constraint","Regulatory constraint","Real-time performance constraint","Cost constraint"], ans: 2 },
-  { q: "What does 'Scalability' mean as a design constraint in software systems?", opts: ["The system can only support 10 users","The system can handle growing numbers of users and data without performance degradation","The system uses less memory","The system is lightweight"], ans: 1 },
-  { q: "What are the three phases of system functionality mentioned in operational constraints?", opts: ["Design, Development, Deployment","Login, Use, Logout","Pre-operation, Operation, Post-operation","Planning, Testing, Release"], ans: 2 },
+  // ── PROTOTYPING & PATTERNS ──
+  { q: "A designer shows a clickable prototype to stakeholders where buttons work but images are still placeholders. What fidelity level is this?", opts: ["Low-fidelity", "Medium-fidelity", "High-fidelity", "Production-ready"], ans: 1 },
+  { q: "Instagram hides its 'Settings' option deep in the profile menu rather than in the main navigation. This is an example of:", opts: ["Bad UX design", "Progressive Disclosure", "Navigation Anti-pattern", "Visual Hierarchy Failure"], ans: 1 },
+  { q: "A button says 'Submit' on a form. A user isn't sure what happens after they click it. What is the better UX writing practice?", opts: ["Add an exclamation mark: 'Submit!'", "Use action-oriented, specific text like 'Create My Account'", "Use a larger font size", "Change the button to an icon"], ans: 1 },
+  { q: "A website looks great on desktop but the text is too small on mobile. What design approach should have been used from the start?", opts: ["Desktop-first design", "Mobile-first design", "Print-first design", "Tablet-first design"], ans: 1 },
+  { q: "On a dashboard, related charts are placed close together while unrelated ones have more space between them. Which Gestalt principle is being applied?", opts: ["Similarity", "Proximity", "Continuation", "Closure"], ans: 1 },
+  { q: "A UX designer is given a brief to 'redesign the login page.' What should they do FIRST?", opts: ["Open Figma and start wireframing immediately", "Understand the problem — why is the current login page failing?", "Choose a color palette for the new design", "Look at competitor login pages"], ans: 1 },
 
-  // ── LAB 08 — System Interfaces ──
-  { q: "What are the four types of interfaces described in Section 3 of an SRS?", opts: ["Input, Output, Storage, Network","User Interfaces, Hardware Interfaces, Software Interfaces, Communication Interfaces","Frontend, Backend, Database, API","Design, Development, Testing, Deployment"], ans: 1 },
-  { q: "What is the purpose of a 'Guest Mode Interface' in a software system?", opts: ["To give full access without registration","To allow limited access — typically browsing or searching — without requiring login","To block unauthorized users completely","To show admin controls"], ans: 1 },
-  { q: "Why is HTTPS used instead of HTTP for web application communication?", opts: ["HTTPS is faster than HTTP","HTTPS encrypts data in transit, protecting it from interception and man-in-the-middle attacks","HTTPS uses less bandwidth","HTTPS does not require a server"], ans: 1 },
-  { q: "What is the role of a REST API in system communication interfaces?", opts: ["To design the user interface layout","To enable communication between client and server using standard HTTP methods (GET, POST, PUT, DELETE)","To store data in the database","To manage GPS hardware"], ans: 1 },
-  { q: "What does 'responsive layout' mean in GUI standards?", opts: ["The UI responds only to keyboard input","The UI automatically adjusts its layout for different screen sizes (mobile, tablet, desktop)","The UI refreshes every 5 seconds","The UI uses only one color theme"], ans: 1 },
-  { q: "What is the purpose of push notifications in a system's communication interface?", opts: ["To store messages in a database","To send real-time alerts to users' devices without them actively using the app","To encrypt user data","To backup system logs"], ans: 1 },
-  { q: "Which security consideration ensures stored passwords cannot be read even if the database is compromised?", opts: ["HTTPS protocol","JWT tokens","Password encryption / hashing","Firewall rules"], ans: 2 },
+  // ── FIGMA ──
+  { q: "In Figma, you want to reuse the same button style across 50 screens. If you update one, all 50 update automatically. Which Figma feature makes this possible?", opts: ["Groups", "Components & Instances", "Frames", "Auto Layout"], ans: 1 },
+  { q: "A designer wants buttons in a row to automatically adjust spacing when a new button is added. Which Figma feature should they use?", opts: ["Constraints", "Auto Layout", "Component Variants", "Grid Styles"], ans: 1 },
+  { q: "You have a button component that needs to exist in 3 states: Default, Hover, and Disabled. What is the most efficient way to manage all 3 in Figma?", opts: ["Create 3 separate components with different names", "Use Component Variants with a 'State' property", "Duplicate frames for each state", "Use different pages for each state"], ans: 1 },
+
+  // ── UX CONCEPT ──
+  { q: "After completing a file upload, the app shows a green checkmark and says 'File uploaded successfully!' This is an example of which UX principle?", opts: ["Affordance", "Feedback", "Constraint", "Mapping"], ans: 1 },
 ];
 // ══════════════════════════════════════════════
 function shuffle(arr) {
